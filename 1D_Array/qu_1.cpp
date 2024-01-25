@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-main()
+int main()
 {
 	int n,i;
 	
@@ -36,5 +36,6 @@ main()
 			cout << a[i] << " ";
 		}
 	}
-	
+
+	return 0;
 }

@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-	int feet,inc,x=0;
+	int feet,inc;
 	
 	cout << "Enter the feet : ";
 	cin >> feet;
@@ -12,7 +12,7 @@ int main()
 	cin >> inc;
 	
 	feet = feet + (inc / 12);
-	inc = x + (inc % 12);
+	inc = inc % 12;
 	
 	cout << endl << "Feet - " << feet << ",";
 	cout << " Inches - " << inc;

@@ -43,9 +43,9 @@ class Car
 	{
 		cout << endl << "The " << a << " Employee details are below : " << endl;
 		cout << "Car ID          : " << id << endl;
-		cout << "release_year    : " << release_year << endl;
 		cout << "Car color       : " << color << endl;   
 		cout << "Car model       : " << model << endl;
+		cout << "release_year    : " << release_year << endl;
 		cout << "Company_name    : " << cmp_name << endl;
 	}
 	

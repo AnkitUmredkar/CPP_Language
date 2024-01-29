@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	int a,ss=00,mm=00,hh=00;
+	int a,ss=0,mm=0,hh=0;
 	
 	cout << "\n\nEnter the seconds :";
 	cin >> a;

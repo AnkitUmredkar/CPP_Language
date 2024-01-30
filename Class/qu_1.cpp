@@ -12,7 +12,7 @@
 #include<string.h>
 using namespace std;
 
-class emp
+class Employee
 {
 	public:
 	int id,age,salary,exp;
@@ -20,7 +20,7 @@ class emp
 	
 	void input(int a)
 	{
-		cout << endl << endl << "Enter the "<< a <<" employee details" << endl;
+		cout << endl << endl << "Enter the "<< a <<" Employee details" << endl;
 		cout << "Enter the Name of employee : ";
 		getline(cin, name);
 			
@@ -68,7 +68,7 @@ class emp
 int main()
 {
 	int i,n=5,a=1;
-	class emp e[n];
+	class Employee e[n];
 	
 	for(i=0; i<n; i++)
 	{

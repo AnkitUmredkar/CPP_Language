@@ -9,7 +9,6 @@
 //- emp_company_name
 
 #include<iostream>
-#include<string.h>
 using namespace std;
 
 class Employee

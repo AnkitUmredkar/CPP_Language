@@ -13,12 +13,20 @@ class Time
 		cout << "Enter the second : ";
 		cin >> second;
 		
-		hh = (second / 3600);
-		s = (second % 3600);
-		mm = (s / 60);
-		ss = (s % 60);
-		
-		cout << hh << " : " << mm << " : " << ss;
+		if(second < 0)
+		{
+			cout << "Second should be positive!!";
+		}
+		else
+		{
+			hh = (second / 3600);
+			s = (second % 3600);
+			mm = (s / 60);
+			ss = (s % 60);
+			
+			cout << hh << " : " << mm << " : " << ss;
+		}
+	
 	}
 	
 };

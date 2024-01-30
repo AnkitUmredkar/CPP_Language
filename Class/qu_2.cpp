@@ -17,36 +17,36 @@ class Car
 	
 	void input(int a)
 	{
-		cout << endl << endl << "Enter the "<< a <<" employee details" << endl;
+		cout << endl << endl << "Enter the "<< a <<" Car details" << endl;
 			
 		cout << "Enter the id of car : ";
 		cin >> id;
 		
 		getline(cin,line);	
-		cout << "Enter the color of car : ";
-		cin >> color;
-			
-		getline(cin,line);
-		cout << "Enter the model of car : ";
-		getline(cin, model);
+		cout << "Enter the company_name of car : ";
+		getline(cin, cmp_name);
 		
 		cout << "Enter the release year of car : ";
 		cin >> release_year;
 		
 		getline(cin,line);	
-		cout << "Enter the company_name of car : ";
-		getline(cin, cmp_name);	
+		cout << "Enter the color of car : ";
+		cin >> color;
+		
+		getline(cin,line);
+		cout << "Enter the model of car : ";
+		getline(cin, model);
 		
 	}
 	
 	void output(int a)
 	{
-		cout << endl << "The " << a << " Employee details are below : " << endl;
+		cout << endl << "The " << a << " Car details are below : " << endl;
 		cout << "Car ID          : " << id << endl;
-		cout << "release_year    : " << release_year << endl;
-		cout << "Car color       : " << color << endl;   
-		cout << "Car model       : " << model << endl;
 		cout << "Company_name    : " << cmp_name << endl;
+		cout << "Release_year    : " << release_year << endl; 
+		cout << "Car color       : " << color << endl;
+		cout << "Car model       : " << model << endl;  
 	}
 	
 };

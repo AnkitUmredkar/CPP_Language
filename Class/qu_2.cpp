@@ -53,7 +53,7 @@ class Car
 int main()
 {
 	int i,n=4,a=1;
-	class Car e[n];
+	Car e[n];
 	
 	for(i=0; i<n; i++)
 	{

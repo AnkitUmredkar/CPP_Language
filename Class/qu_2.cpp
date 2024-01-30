@@ -27,9 +27,6 @@ int main()
 	hh = (a / 60);
 
 	cout << hh << " : "<< mm << " : " << ss;
-	while(1)
-	{
-		main();
-	}
+	
  	return 0;
 }

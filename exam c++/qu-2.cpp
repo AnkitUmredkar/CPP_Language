@@ -6,7 +6,7 @@ using namespace std;
 class Time
 {
 	public:
-	int hh=0,mm=0,ss=0,second;
+	int hh,mm,ss,second;
 	
 	void hms()
 	{

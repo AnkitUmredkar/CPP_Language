@@ -67,7 +67,7 @@ class Employee
 int main()
 {
 	int i,n=5,a=1;
-	class Employee e[n];
+	Employee e[n];
 	
 	for(i=0; i<n; i++)
 	{

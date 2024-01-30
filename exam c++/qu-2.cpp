@@ -16,7 +16,7 @@ class Time
 		hh = (second / 3600);
 		ss = (second % 3600);
 		mm = (ss / 60);
-		ss = (second % 60);
+		ss = (ss % 60);
 		
 		cout << hh << " : " << mm << " : " << ss;
 	}

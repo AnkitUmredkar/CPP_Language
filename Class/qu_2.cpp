@@ -6,7 +6,6 @@
 //- car_release_year
 
 #include<iostream>
-#include<string.h>
 using namespace std;
 
 class Car

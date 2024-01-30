@@ -46,7 +46,7 @@ class Dis
 
 int main()
 {
-	class Dis a;
+	Dis a;
 	
 	a.answer();
 	

@@ -25,7 +25,7 @@ class Time
 
 int main()
 {
-	class Time a;
+	Time a;
 	
 	a.hms();
 	

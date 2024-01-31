@@ -12,10 +12,10 @@ using namespace std;
 
 class Dis
 {
-	public:
-	int feet1,inc1;
-	int feet2,inc2;
+	int feet1,inc1,feet2,inc2,totalfeet,totalinc;
 	
+	public:
+		
 	void answer()
 	{
 		cout << "Enter the feet : ";
@@ -32,14 +32,10 @@ class Dis
 		cout << "Enter the inc : ";
 		cin >> inc2;
 		
-		feet1 = feet1 + (inc1 / 12);
-		inc1 = (inc1 % 12);
+		totalfeet = (feet1 + feet2) + ((inc1 + inc2) / 12);
+		totalinc  = ((inc1 + inc2)% 12);
 		
-		feet2 = feet2 + (inc2 / 12);
-		inc2 = (inc2 % 12);
-		
-		cout << endl << "Feet   : " << feet1+feet2 << endl;
-		cout << "Inches : " << inc1 + inc2;
+		cout << endl << "Feet  : " << totalfeet << " , Inches : " << totalinc;
 	}
 	
 };

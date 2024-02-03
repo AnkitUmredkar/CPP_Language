@@ -19,7 +19,7 @@ class Fastfood
 	public:
 		Fastfood()
 		{
-			cout << endl << endl << "Enter the " << i << " company details" << endl;
+			cout << endl << endl << "Enter the cafe " << i << " details" << endl;
 			cout << "Enter the cafe id : ";
 			cin >> cafe_id;
 			cin.ignore();
@@ -41,7 +41,7 @@ class Fastfood
 			cin >> cafe_establish_year;
 			cin.ignore();
 			
-			cout << "Enter the cafe staff_ uantity : ";
+			cout << "Enter the cafe staff Quantity : ";
 			cin >> cafe_staff_quantity;
 			cin.ignore();
 			i = i + 1;
@@ -58,7 +58,7 @@ class Fastfood
 			cout << "Cafe Location       : "  << cafe_location << endl;
 			cout << "Cafe Establish Year : "  << cafe_establish_year << endl;
 			cout << "Cafe Staff Quantity : "  << cafe_staff_quantity << endl;
-			cout << "-------------------------------------------------" << endl;
+			cout << "------------------------------------------------" << endl;
 		}
 };
 

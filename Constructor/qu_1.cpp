@@ -29,9 +29,9 @@ class Diamond
 		comp_ceo = ceo;
 	}
 	
-	void output(int a)
+	void output(int i)
 	{
-		cout << endl << endl << "The" << a+1 << " Company details are below : " << endl;
+		cout << endl << endl << "The " << i+1 << " Company details are below : " << endl;
 		cout << "------------------------------------------" << endl;
 		cout << "Company ID          : " << comp_id << endl;
 		cout << "Company Name        : " << comp_name << endl;
@@ -58,6 +58,7 @@ int main()
 	for(i=0; i<n; i++)
 	{
 		cout << endl << endl << "Enter the company " << i+1 << " details" << endl;
+		cout << "------------------------------" << endl;
   		cout << "Enter the company id : ";
 		cin >> id;
 		cin.ignore();

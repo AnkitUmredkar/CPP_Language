@@ -9,7 +9,7 @@ using namespace std;
 class P
 {
 	protected :
-	float degree,Fahrenheit,Kelvin;
+	float Temperature,Fahrenheit,Kelvin;
 };
 
 class Q : public P
@@ -19,10 +19,9 @@ class Q : public P
 		void toFahrenheit()
 		{
 			cout << "Enter degree Celsius temperature : ";
-			cin >> degree;
+			cin >> Temperature;
 			
-			Fahrenheit = (9.0/5.0 * degree) + 32;
-			
+			Fahrenheit = (9.0/5.0 * Temperature) + 32;
 		}
 };
 
@@ -32,12 +31,12 @@ class R : public Q
 		
 		void toKelvin()
 		{
-			Kelvin = (5.0/9.0) * (Fahrenheit + 459.67); //(T)K = 5/9 [(T)F + 459.67] From Google
+			Kelvin = (5.0/9.0) * (Fahrenheit + 459.67); 
 		}
 		
 		void output()
 		{
-			cout << endl << "From Degree to Fahrenheit Converstion is : " << Fahrenheit << endl;
+			cout << endl << "From Degree Celsius to Fahrenheit Converstion is : " << Fahrenheit << endl;
 			cout << endl << "From Fahrenheit to Kelvin Converstion is : " << Kelvin << endl;
 		}
 };

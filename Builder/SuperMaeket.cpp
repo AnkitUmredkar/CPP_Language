@@ -46,6 +46,7 @@ int SuperMarket::Discount = 10;
 int main()
 {
 	int n,i,num,quan,prc,dis,choice,srch;
+	bool x;
 	string name,id,id1,pswrd,pswrd1;
 	
 	cout << "How Many Item You Want Enter That Number : ";
@@ -115,10 +116,17 @@ int main()
 						cin >> srch;
 						for(i=0; i<n; i++)
 						{
+							x = false;			//If User Entered Item Number Does Not available so That Time We Will print Error msg.
 							if(arr[i] == srch)
 							{
 								obj[i].output(i);
+								x = true;
+								break;
 							}
+						}
+						if(x == false)
+						{
+							cout << "\nThis Number's Item Does not Available!!" << endl;
 						}
 						break;
 						

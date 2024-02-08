@@ -17,19 +17,16 @@ using namespace std;
 class Train 
 {
     int TrainNumber,i;
-    string TrainName;
-    string source;
-    string destination;
-    string TrainTime;
+    string TrainName,Destination,TrainTime;
+    static string Source;
     public:
 
-    Train(int a,string b,string c,string d,string e) 
+    Train(int num,string name,string destination,string time) // Parameterized Constructor
 	{
-		TrainNumber = a;
-		TrainName = b;
-		source = c;
-		destination = d;
-		TrainTime = e;
+		TrainNumber = num;
+		TrainName = name;
+		Destination = destination;
+		TrainTime = time;
 	}
 	
 	void displayallrcrds(int i)
@@ -38,43 +35,46 @@ class Train
 		cout << "-----------------------------------" << endl;
  		cout << "Train Number      : " << TrainNumber << endl;
 		cout << "Train Name        : " << TrainName << endl;
-		cout << "Train Source      : " << source << endl;
-		cout << "Train Destination : " << destination << endl;
-		cout << "Train Time        : " << TrainTime << endl;
+		cout << "Train Source      : " << Source << endl;
+		cout << "Train Destination : " << Destination << endl;
+		cout << "Train Time        : " << TrainTime << ":00"<< endl;
 		cout << "-----------------------------------" << endl;
 	}
 }; 
 
+string Train::Source = "Surat";
+
 int main() 
 {
-	int n=3,i,a,choise,srch;
-	string b,c,d,e;
+	int n,i,num,choise,srch;
+	string name,src,destination,time;
 	
-	Train t[n] = Train(a,b,c,d,e);
+	cout << "How many Train's Information You Want Enter That number : ";
+	cin >> n;
+	
+	Train t[n] = Train(num,name,destination,time); // Declaration of an Array of Object
 	
 	int arr[n];
 	
-	for(i = 0; i < n; i++)	
+	for(i = 0; i < n; i++)	// Input Process
 	{
 		cout << endl << endl << "Enter Train " << i+1 << " Details";
-		cout << endl << "Enter Train Number: ";
-        cin >> a;
+		cout << endl << "----------------------------" << endl;
+		cout << "Enter Train Number: ";
+        cin >> num;
         cin.ignore();  // Clear the newline character from the buffer
 
         cout << "Enter Train Name: ";
-        getline(cin, b);
+        getline(cin, name);
 
-        cout << "Enter Source: ";
-        getline(cin, c);
-
-        cout << "Enter Destination: ";
-        getline(cin, d);
+        cout << "Enter Destination Source: ";
+        getline(cin, destination);
 
         cout << "Enter Train Time: ";
-        getline(cin, e);
+        getline(cin, time);
 		
-		arr[i] = a;
-		t[i] = Train(a,b,c,d,e);
+		arr[i] = num;
+		t[i] = Train(num,name,destination,time);
 	
 	}
 	
@@ -87,7 +87,7 @@ int main()
         cout << "Enter your choice: ";
         cin >> choise;
 		
-		switch(choise)
+		switch(choise) // Output Process
 		{
 			case 1 : 
 				for(i=0; i<n; i++)
@@ -97,7 +97,7 @@ int main()
 				break;	
 				
 			case 2:
-				cout << "Enter the Train Number to Search : ";
+				cout << "\nEnter the Train Number to Search : ";
 				cin >> srch;
 				for(i=0; i<n; i++)
 				{
@@ -109,14 +109,13 @@ int main()
 				break;
 				
 			case 3:
-				cout << endl << "Progran Exit. Thank you";
+				cout << endl << "Progran Exit. Thank you!";
 				break;
 				
 			default :
-				cout << "Enter the valid choice (1 to 3)" << endl;
+				cout << "Enter the valid choice Between (1 to 3)" << endl;
 		}
 	}while(choise!=3);
     
     return 0;
 }
-

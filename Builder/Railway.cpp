@@ -47,6 +47,7 @@ string Train::Source = "Surat";
 int main() 
 {
 	int n,i,num,choise,srch;
+	bool x;
 	string name,src,destination,time;
 	
 	cout << "How many Train's Information You Want Enter That number : ";
@@ -101,10 +102,17 @@ int main()
 				cin >> srch;
 				for(i=0; i<n; i++)
 				{
+					x = false;		//If User Entered Train Number Does Not available so That Time We Will print Error msg.
 					if(arr[i] == srch)
 					{
 						t[i].displayallrcrds(i);
+						x = true;
+						break;
 					}
+				}
+				if(x == false)
+				{
+					cout << "\nThis Number's Train Does not Available!!" << endl;
 				}
 				break;
 				

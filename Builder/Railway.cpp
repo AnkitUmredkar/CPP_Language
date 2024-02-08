@@ -21,7 +21,7 @@ class Train
     static string Source;
     public:
 
-    Train(int num,string name,string destination,string time) // Parameterized Constructor
+    	Train(int num,string name,string destination,string time) // Parameterized Constructor
 	{
 		TrainNumber = num;
 		TrainName = name;
@@ -61,17 +61,17 @@ int main()
 		cout << endl << endl << "Enter Train " << i+1 << " Details";
 		cout << endl << "----------------------------" << endl;
 		cout << "Enter Train Number: ";
-        cin >> num;
-        cin.ignore();  // Clear the newline character from the buffer
+        	cin >> num;
+        	cin.ignore();  // Clear the newline character from the buffer
 
-        cout << "Enter Train Name: ";
-        getline(cin, name);
+        	cout << "Enter Train Name: ";
+        	getline(cin, name);
 
-        cout << "Enter Destination Source: ";
-        getline(cin, destination);
+        	cout << "Enter Destination Source: ";
+        	getline(cin, destination);
 
-        cout << "Enter Train Time: ";
-        getline(cin, time);
+        	cout << "Enter Train Time: ";
+        	getline(cin, time);
 		
 		arr[i] = num;
 		t[i] = Train(num,name,destination,time);
@@ -81,11 +81,11 @@ int main()
 	do
 	{
 		cout << "\nRailway Reservation System\n";
-        cout << "Press : 1 for Display All Records\n";
-        cout << "Press : 2 for Search by Train Number\n";
-        cout << "Press : 3 for Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choise;
+	        cout << "Press : 1 for Display All Records\n";
+	        cout << "Press : 2 for Search by Train Number\n";
+	        cout << "Press : 3 for Exit\n";
+	        cout << "Enter your choice: ";
+	        cin >> choise;
 		
 		switch(choise) // Output Process
 		{

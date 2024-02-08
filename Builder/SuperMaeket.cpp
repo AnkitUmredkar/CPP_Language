@@ -16,16 +16,16 @@ using namespace std;
 
 class SuperMarket
 {
-	int ItemNumber,quantity,price,discount;
+	int ItemNumber,Quantity,Price;
+	static int Discount;
 	string ItemName;
 	public:
-		SuperMarket(int a,string b, int c,int d,int e)
+		SuperMarket(int num,string name,int quan,int prc) // Parameterized Constructor
 		{
-			ItemNumber = a;
-			ItemName = b;
-			quantity = c;
-			price = d;
-			discount = e;
+			ItemNumber = num;
+			ItemName = name;
+			Quantity = quan;
+			Price = prc;
 		}
 		void output(int i)
 		{
@@ -33,24 +33,25 @@ class SuperMarket
 			cout << "-----------------------------------" << endl;
 			cout << "Item Number : " << ItemNumber << endl;
 			cout << "Item Name   : " << ItemName << endl;
-			cout << "Quantity    : " << quantity << endl;
-			cout << "Item Price  : " << price << endl;
-			cout << "Discount    : " << discount << " %" << endl;
+			cout << "Quantity    : " << Quantity << endl;
+			cout << "Item Price  : " << Price << endl;
+			cout << "Discount    : " << Discount << " %" << endl;
 			cout << "-----------------------------------" << endl;
 		}		
 		
 };
 
+int SuperMarket::Discount = 10;
 
 int main()
 {
-	int n,i,a,c,d,e,choice,srch,v=0;
-	string b,id,id1,pswrd,pswrd1;
+	int n,i,num,quan,prc,dis,choice,srch;
+	string name,id,id1,pswrd,pswrd1;
 	
-	cout << "Enter the number of Item : ";
+	cout << "How Many Item You Want Enter That Number : ";
 	cin >> n;
 	int arr[n];
-	SuperMarket obj[n] = SuperMarket(a,b,c,d,e);
+	SuperMarket obj[n] = SuperMarket(num,name,quan,prc); // Declaration of an Array of Object
 	
 	cout << "Enter the your id : ";
 	cin >> id;
@@ -58,42 +59,40 @@ int main()
 	cout << "Enter the your Password : ";
 	cin >> pswrd;
 	
-	for(i=0; i<n; i++)
+	for(i=0; i<n; i++) // Input Process
 	{	
 		cout << endl << endl << "Enter the SuperMarket details : " << endl;
 		cout << "Enter the Item Number : ";
-		cin >> a;
+		cin >> num;
 		cin.ignore();
 			
 		cout << "Enter the Item Name : ";
-		getline(cin, b);
+		getline(cin, name);
 			
 		cout << "Enter the Quantity : ";
-		cin >> c;
+		cin >> quan;
 		
 		cout << "Enter the Item price : ";
-		cin >> d;
-			
-		cout << "Enter the Discount : ";
-		cin >> e;
+		cin >> prc;
 		
-		arr[i] = a;
-		obj[i] = SuperMarket(a,b,c,d,e);
+		arr[i] = num;
+		obj[i] = SuperMarket(num,name,quan,prc);
 	}
 	start:
-	cout << endl << "Enter the your id to verify : ";
+	cout << endl << "Enter the your id to Verification : ";
 	cin >> id1;
 	
-	if(id == id1)
+	if(id == id1) // Verify ID and Password
 	{
 		cout << "Yes, Your ID is Correct" << endl;
 		start1:
-		cout << endl << "Enter the your password to verify : ";
+		cout << endl << "Enter the your password to Verification : ";
 		cin >> pswrd1;
 		if(pswrd == pswrd1)
 		{
 			cout << "Yes, Your Password is Correct";
-			do
+			
+			do  //if Id Password is correct Than you can Enter option for Information Which you want
 			{
 				cout << endl << endl << "SuperMarket Billing System\n";
 				cout << "Press 1. for Display all Records" << endl;
@@ -102,7 +101,7 @@ int main()
 				
 				cout << "Enter Your Choice : ";
 				cin >> choice;
-				switch(choice)
+				switch(choice) // Output Process
 				{
 					case 1 : 
 						for(i=0; i<n; i++)
@@ -111,7 +110,7 @@ int main()
 						}
 						break;
 						
-					case 2 :
+					case 2 : 
 						cout << "Enter The Item Number Which you want : ";
 						cin >> srch;
 						for(i=0; i<n; i++)
@@ -131,7 +130,7 @@ int main()
 						cout << endl << "Enter the valid choice between (1 to 3) : " << endl;
 						
 				}
-			}while(choice != 3);
+			}while(choice != 3); // if you enter 3 than process has been end
 		}
 		else
 		{
@@ -147,4 +146,3 @@ int main()
 	
 	return 0;
 }
-

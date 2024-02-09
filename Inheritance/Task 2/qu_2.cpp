@@ -38,7 +38,7 @@ class C : public A,public B
 			A::set1();
 			B::set2();
 			
-			cout << "\nEnter the number which you want to print Enter (1 or 2) : ";
+			cout << endl << "If you want to print first value then press : 1\nIf you want to print second value then press : 2 " << endl;
 			cin >> x;
 			 
 			if(x == 1)

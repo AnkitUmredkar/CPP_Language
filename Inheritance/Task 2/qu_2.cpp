@@ -43,11 +43,11 @@ class C : public A,public B
 			 
 			if(x == 1)
 			{
-			 	cout << "\na : " << A::a;
+			 	cout << endl << "a : " << A::a;
 			}
 			else
 			{
-				cout << "\na : " << B::a;
+				cout << endl << "a : " << B::a;
 			}
 		}
 };

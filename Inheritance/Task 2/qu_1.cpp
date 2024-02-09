@@ -16,19 +16,19 @@ class RBI
 	
 	public :
 		
-		void getSBIROI()
+		void setSBIROI()
 		{
 			cout << "Enter the Intrece Rate of SBI : " ;
 			cin >> rateSBI;
 		}
 		
-		void getBOBROI()
+		void setBOBROI()
 		{
 			cout << "\nEnter the Intrece Rate of BOB : " ;
 			cin >> rateBOB;
 		}
 		
-		void getICICIROI()
+		void setICICIROI()
 		{
 			cout << "\nEnter the Intrece Rate of ICICI : ";
 			cin >> rateICICI;
@@ -39,9 +39,9 @@ class RBI
 class SBI : public RBI
 {
 	public : 
-		void show1()
+		void get1()
 		{
-			getSBIROI();
+			setSBIROI();
 			cout << "The Intrest Rate of SBI is : " << rateSBI << " %" << endl;
 		}
 };
@@ -49,9 +49,9 @@ class SBI : public RBI
 class BOB : public RBI
 {
 	public :
-		void show2()
+		void get2()
 		{
-			getBOBROI();
+			setBOBROI();
 			cout << "The Intrest Rate of BOB is : " << rateBOB << " %"<< endl;
 		}
 };
@@ -59,9 +59,9 @@ class BOB : public RBI
 class ICICI : public RBI
 {
 	public :
-		void show3()
+		void get3()
 		{
-			getICICIROI();
+			setICICIROI();
 			cout << "The Intrest Rate of ICICI is : " << rateICICI <<" %" << endl;		
 		}
 };
@@ -71,13 +71,13 @@ int main()
 {
 	
 	SBI s;
-	s.show1();
+	s.get1();
 	
 	BOB b;
-	b.show2();
+	b.get2();
 	
 	ICICI i;
-	i.show3();
+	i.get3();
 	
 	return 0;
 }

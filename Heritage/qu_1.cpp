@@ -6,7 +6,7 @@ using namespace std;
 class Base
 {
 	protected :
-		int	n,ans;
+		int n,ans;
 	public :
 		void set()
 		{

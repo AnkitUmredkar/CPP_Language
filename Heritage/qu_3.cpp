@@ -20,7 +20,6 @@ class A
 			
 			cout << "Enter the Employee Role : ";
 			getline(cin, emp_role);
-			
 		}
 			
 };
@@ -32,15 +31,13 @@ class B : public A
 
 		void setter()
 		{
-			
+			A::setter();
 			cout << "Enter the Employee Salary : ";
 			cin >> emp_salary;
 			cin.ignore();
 			
 			cout << "Enter the Employee Wrok Experience : ";
 			cin >> emp_exp;
-			
-			A::setter();
 		}	
 };
 
@@ -51,13 +48,13 @@ class C : public B
 
 		void setter()
 		{	
+			B :: setter();
 			cin.ignore();
 			cout << "Enter the Company Name : ";
 			getline(cin, comp_name);
 			
 			cout << "Enter the Employee Address : ";
 			getline(cin, emp_address);
-			B :: setter();
 		}
 		
 		void getter()
@@ -76,12 +73,12 @@ class D : public C
 	public :
 		void setter()
 		{
+			C :: setter();
 			cout << "Enter the E-mail id : ";
 			getline(cin, e_mail);
 			
 			cout << "Enter the Employee contect : ";
 			cin >> emp_contect;
-			C :: setter();
 		}
 	
 		void getter()
@@ -95,7 +92,7 @@ class D : public C
 			cout << "Employee's Address     : " << emp_address << endl;
 			cout << "Employee's E-mail      : " << e_mail << endl;
 			cout << "Employee's Contect     : " << emp_contect << endl;
-				
+			cout << "---------------------------------" << endl;
 		}		
 };
 
@@ -108,4 +105,3 @@ int main()
 
 	return 0;
 }
-

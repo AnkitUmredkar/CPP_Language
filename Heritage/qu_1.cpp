@@ -6,11 +6,11 @@ using namespace std;
 class Base
 {
 	protected :
-		int	n;
+		int	n,ans;
 	public :
 		void set()
 		{
-			cout << endl << "Enter the number which you want : ";
+			cout << endl << endl << "Enter the number which you want : ";
 			cin >> n;
 		}
 };
@@ -20,7 +20,8 @@ class Square : public Base
 	public :
 		void square()
 		{
-			cout << endl << "The Square of entered number is : " << (n * n);
+			set();
+			cout << "The Square of entered number is : " << n * n;
 		}
 };
 
@@ -29,14 +30,13 @@ class Cube : public Base
 	public :
 		void cube()
 		{
-			cout << endl << "The Cube of entered number is : " << (n * n * n);
+			set();
+			cout << "The Cube of entered number is : " << n * n * n;
 		}
 };
 
 int main()
 {
-	Base obj;
-	obj.set();
 	
 	Square obj_1;
 	obj_1.square();

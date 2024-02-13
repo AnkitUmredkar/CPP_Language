@@ -13,7 +13,12 @@ class A
 {
 	protected :
 		int a,n1,n2,n3,n4,n5;
-		
+};
+
+class B : public A
+{
+	public :
+
 		calculate(int n1,int n2)
 		{
 			cout << endl << "Division is : " << n1 / n2;
@@ -33,83 +38,16 @@ class A
 		{
 			cout << endl << "Addition is : " << n1 + n2 + n3 + n4 + n5;
 		}
-	
-};
-
-class B : public A
-{
-	public :
-	 	void setter()
-	 	{
-	 		cout << "Enter how many Argument you wnat to pass : ";
-	 		cin >> a;
-	 		
-	 		if(a==2)
-	 		{
-	 			cout << "Enter First value : ";
-	 			cin >> n1;
-	 			
-	 			cout << "Enter Second value : ";
-	 			cin >> n2;
-	 			
-	 			calculate(n1,n2);
-			}
-			else if(a==3)
-			{
-				cout << "Enter First value : ";
-	 			cin >> n1;
-	 			
-	 			cout << "Enter Second value : ";
-	 			cin >> n2;
-				 
-				cout << "Enter Third value : ";
-	 			cin >> n3;
-	 			
-				calculate(n1,n2,n3);
-			}
-			else if(a==4)
-			{
-				cout << "Enter First value : ";
-	 			cin >> n1;
-	 			
-	 			cout << "Enter Second value : ";
-	 			cin >> n2;
-				 
-				cout << "Enter Third value : ";
-	 			cin >> n3;
-	 			
-	 			cout << "Enter forth value : ";
-	 			cin >> n4;
-	 			
-	 			calculate(n1,n2,n3,n4);
-			}
-			else if(a==5)
-			{
-				cout << "Enter First value : ";
-	 			cin >> n1;
-	 			
-	 			cout << "Enter Second value : ";
-	 			cin >> n2;
-				 
-				cout << "Enter Third value : ";
-	 			cin >> n3;
-	 			
-	 			cout << "Enter Forth value : ";
-	 			cin >> n4;
-	 			
-	 			cout << "Enter Fifth value : ";
-	 			cin >> n5;
-	 			
-	 			calculate(n1,n2,n3,n4,n5);
-			}
-	 		
-		}
 };
 
 int main()
 {
 	B obj;
-	obj.setter(); 
+
+    obj.calculate(1,2,3,4,5);
+    obj.calculate(1,2,3,4);
+    obj.calculate(10,3,2);
+    obj.calculate(10,2);
 	
 	return 0;
 }

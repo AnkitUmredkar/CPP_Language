@@ -12,7 +12,7 @@ using namespace std;
 class A
 {
 	protected :
-		int a,n1,n2,n3,n4,n5;
+		int n1,n2,n3,n4,n5;
 };
 
 class B : public A

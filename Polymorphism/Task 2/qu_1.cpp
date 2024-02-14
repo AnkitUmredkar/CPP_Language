@@ -43,7 +43,10 @@ int main()
 {
 	Math obj1,obj2,obj3;
 	
+	cout << "Enter the value for First object : " << endl;
 	obj1.set();
+	
+	cout  << endl << "Enter the value for Second object : " << endl;
 	obj2.set();
 	
 	obj3 = obj1 + obj2;

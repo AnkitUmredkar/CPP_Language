@@ -31,9 +31,7 @@ class Distance
 			temp.Meter = ((Meter + obj2.Meter) % 1000);
 			
 			return temp;
-			
 		}	
-		
 };
 
 int main()
@@ -52,4 +50,3 @@ int main()
 	
 	return 0;
 }
-

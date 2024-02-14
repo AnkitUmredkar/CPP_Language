@@ -1,4 +1,4 @@
-//1 Write a Program to overload < operator to find which object contains a higher value from given 2 numbers.
+//'-' Arithemetic Operator Over Loading
 
 #include<iostream>
 using namespace std;
@@ -18,11 +18,11 @@ class Math
 		
 		void get()
 		{
-			cout << "a : " << a << endl;
+			cout << endl << "a : " << a << endl;
 			cout << "b : " << b;
 		}
 		
-		Math operator +(Math &obj2)
+		Math operator -(Math &obj2)
 		{
 			int x,y;
 			Math temp;
@@ -45,7 +45,7 @@ int main()
 	obj1.set();
 	obj2.set();
 	
-	obj3 = obj1 + obj2;
+	obj3 = obj1 - obj2;
 	
 	obj3.get();
 	

@@ -6,6 +6,8 @@ using namespace std;
 class Math
 {
 	int a;
+	bool b;
+	
 	public :
 		void set()
 		{
@@ -13,28 +15,18 @@ class Math
 			cin >> a;
 		}
 		
-		void get()
+		bool operator <(Math obj2)
 		{
-			cout << "a : " << a << endl;
-		}
-		
-		Math operator +(Math &obj2)
-		{
-			int x,y;
-			Math temp;
-			
-			if(a < obj2.a)
+			if(this->a < obj2.a)
 			{
-				temp.a = obj2.a;
-				cout << endl << "Second object contains Max value " << endl;
+				
+				return true;
 			}
 			else
 			{
-				temp.a = a;
-				cout << endl << "First object contains Max value " << endl;
-			}
-			
-			return temp; 
+				
+				return false;
+			} 
 		}
 };
 
@@ -43,15 +35,17 @@ int main()
 {
 	Math obj1,obj2,obj3;
 	
-	cout << "Enter the value for First object : " << endl;
 	obj1.set();
-	
-	cout  << endl << "Enter the value for Second object : " << endl;
 	obj2.set();
 	
-	obj3 = obj1 + obj2;
-	
-	obj3.get();
+	if(obj1 < obj2)
+	{
+		cout << endl << "Object 2 is Maximum";
+	}
+	else
+	{
+		cout << endl << "Object 1 is Maximum";
+	}
 	
 	return 0;
 }

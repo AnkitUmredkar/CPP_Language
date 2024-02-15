@@ -23,7 +23,7 @@ class Distance
 			cout << endl << "Meter : " << Meter;
 		} 
 		
-		Distance operator +(Distance &obj2)
+		Distance operator +(Distance obj2)
 		{
 			Distance temp;
 				
@@ -44,7 +44,7 @@ int main()
 	cout  << endl << "Input 2 :" << endl;
 	obj2.set();
 	
-	obj3 = obj2 + obj1;
+	obj3 = obj1 + obj2;
 	
 	obj3.get();
 	

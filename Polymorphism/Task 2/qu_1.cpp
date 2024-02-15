@@ -19,7 +19,6 @@ class Math
 		{
 			if(this->a < obj2.a)
 			{
-				
 				return true;
 			}
 			else

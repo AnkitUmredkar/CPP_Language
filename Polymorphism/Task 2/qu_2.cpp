@@ -1,4 +1,4 @@
-//'++' Arithemetic Operator Overloading
+//'++' Unary Operator Overloading
 
 #include<iostream>
 using namespace std;

@@ -29,10 +29,12 @@ int main()
 {
 	Math m1,m2;
 	m1.set();
+	
 	cout << endl << "Value Before Increment";
 	m1.get();
 	
 	m2 = m1++;
+	
 	cout << endl << endl << "Value After Increment";
 	m1.get();
 	

@@ -5,41 +5,36 @@ using namespace std;
 
 class Math
 {
-	int a,b;
+	int num;
 	public :
 		void set()
 		{
-			cout << "Entre the value of a : ";
-			cin >> a;
-			
-			cout << "Entre the value of b : ";
-			cin >> b;
+			cout << "Enter the value : ";
+			cin >> num;
 		}
-		
 		void get()
 		{
-			cout << endl << "a : " << a << endl;
-			cout << "b : " << b;
+			cout << endl << "n : " << num;
+		}
+		Math operator ++(int)
+		{
+			Math obj;
+			obj.num = ++num;
+			return obj;
 		}
 		
-		Math& operator ++()
-		{
-			Math temp;
-			temp.a = a++;
-			temp.b = b++;
-			
-			return temp;
-		}
-
 };
-
 
 int main()
 {
-	Math obj;
-	obj.set();
-	++obj;
-	obj.get();
+	Math m1,m2;
+	m1.set();
+	cout << endl << "Value Before Increment";
+	m1.get();
+	
+	m2 = m1++;
+	cout << endl << endl << "Value After Increment";
+	m1.get();
 	
 	return 0;
 }

@@ -13,15 +13,15 @@
 using namespace std;
 
 class Employee
-{
+{  
 	protected :
-	string company_name = "L & T";
-	int total_annual_revenue = 250000;  
-		
-		public :
+		string company_name,can_terminate;
+		int total_annual_revenue,employee_salary,total_staff,manager_salary;
+	
+	public :
 		void myAccess()
 		{
-			cout << "By Employee Access   : " << endl;
+			cout << endl << endl << "---------- By Employee Access ----------" << endl;
 			cout << "Company Name         : " << company_name << endl;
 			cout << "Total Annual Revenue : " << total_annual_revenue << endl;
 		}
@@ -29,39 +29,52 @@ class Employee
 
 class Manager : public Employee
 {
-	protected :
-		int employee_salary = 15000;
-		int total_staff = 30;
-		int can_terminate = 10;
-		
-		public :
+	public :
 		void myAccess()
 		{
-			cout << endl << endl << "By Manager Access  " << endl;
+			cout << endl << endl << "---------- By Manager Access ----------" << endl;
 			cout << "Company Name         : " << company_name << endl;
+			cout << "Total Annual Revenue : " << total_annual_revenue << endl;
 			cout << "Employee Salary      : " << employee_salary << endl;
 			cout << "Total Staff          : " << total_staff << endl;
 			cout << "Can Terminate        : " << can_terminate << endl;
-			cout << "Total Annual Revenue : " << total_annual_revenue << endl;
 		}
 		
 };
 
 class Admin : public Manager
-{
-	protected :
-		int manager_salary = 70000;
-		
-		public :
+{	
+	public : 
+		void set()
+		{
+			cout << "Enter the Company Name : ";
+			getline(cin, company_name);
+				
+			cout << "Enter the Total Annual Revenue : ";
+			cin >> total_annual_revenue;
+			
+			cout << "Enter the Employee Salary : ";
+			cin >> employee_salary;
+				
+			cout << "Enter the Total Staff : ";
+			cin >> total_staff;
+			cin.ignore();
+				
+			cout << "Enter Can Terminate : ";
+			getline(cin, can_terminate);
+				
+			cout << "Enter the manager Salary : ";
+			cin >> manager_salary;
+		}
 		void myAccess()
 		{
-			cout << endl << endl << "By Admin Access : " << endl;
-			cout << "Manager Salary       : " << manager_salary << endl;
+			cout << endl << endl << "---------- By Admin Access ----------" << endl;
 			cout << "Company Name         : " << company_name << endl;
+			cout << "Total Annual Revenue : " << total_annual_revenue << endl;
 			cout << "Employee Salary      : " << employee_salary << endl;
 			cout << "Total Staff          : " << total_staff << endl;
 			cout << "Can Terminate        : " << can_terminate << endl;
-			cout << "Total Annual Revenue : " << total_annual_revenue;
+			cout << "Manager Salary       : " << manager_salary;
 		}
 };
 
@@ -72,8 +85,9 @@ int main()
 	Manager m1;
 	Admin a1;
 	
-	e1.myAccess();
-	m1.myAccess();
+	a1.set();
+	a1.Employee :: myAccess();
+	a1.Manager :: myAccess();
 	a1.myAccess();
 	
 	

@@ -6,12 +6,41 @@ using namespace std;
 
 class BankAccount
 {
+	private :
+		int balance;
+	public :
 		
+		void set()
+		{
+			cout << "Enter the balance : ";
+			cin >> balance;
+		}
+		void display()
+		{
+			cout << endl << "Total Balance : " << balance;
+		}
+		BankAccount operator +(BankAccount b2)
+		{
+			BankAccount temp;
+			temp.balance = this->balance + b2.balance;
+			
+			return temp;
+		}
 };
 
 int main()
 {
-
+	BankAccount b1,b2,b3;
+	
+	cout << "-- First Account : " << endl;
+	b1.set();
+	
+	cout << endl << "--Second Account  " << endl;
+	b2.set();
+	
+	b3 = b1 + b2;
+	
+	b3.display();
+	
 	return 0;
 }
-

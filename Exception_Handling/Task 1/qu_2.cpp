@@ -1,6 +1,5 @@
 //1 Write a Program to implement exception handling mechanism for different types of scenarios:
 //- a person cannot be able to vote if his/her age is less than 18
-//- a password cannot be validated if it doesn’t contains an uppercase letter
 
 #include<iostream>
 using namespace std;

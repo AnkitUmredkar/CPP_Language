@@ -1,5 +1,5 @@
 //1 Write a Program to implement exception handling mechanism for different types of scenarios:
-//- a password cannot be validated if it doesn’t contains an uppercase letter
+//- a password cannot be validated if it doesnâ€™t contains an uppercase letter
 
 #include<iostream>
 #include<string.h>

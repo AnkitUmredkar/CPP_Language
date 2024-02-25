@@ -7,40 +7,38 @@ using namespace std;
 
 int main()
 {
-	char password[50];
-	int i,len,check=0;
+	string password;
+	int i,len;
+	bool check = false; 
 	
 	cout << "Enter Password : ";
-	cin >> password;
+	getline(cin, password);
 	
-	len=strlen(password);
-	
-	for(i=0; i<=len; i++)
+	for(i=0; i<=password.length(); i++)
 		{
 			if(password[i] >= 'A' && password[i] <= 'Z')
 			{
-				
-				check = 1;
+				check = true;
+				break;
 			}
 			
 		}
 	
 	try
 	{
-		if(check == 0)
+		if(check == true)
 		{
-			throw password;
+			cout << endl << "PassWord is Valid.";
 		}
 		else
 		{
-			cout << endl << "PassWord is Valid.";
+			throw password;
 		}
 	}
 	catch(...)
 	{
-		cout << endl << "PassWord is not Valid!!" << endl;
+		cout << endl << "Invalid! password must contain at least one uppercase letter!!" << endl;
 	}
 	
 	return 0;
 }
-

@@ -10,13 +10,13 @@ protected :
 class B : virtual public A
 {
 protected :
-    int a = 20;
+    int b = 20;
 };
 
-class C : virtual public B
+class C : virtual public A
 {
 protected :
-    int a = 30;
+    int c = 30;
 };
 
 class D : public B, public C
@@ -34,5 +34,6 @@ int main()
     d1.print();
     return 0;
 }
+
 
 

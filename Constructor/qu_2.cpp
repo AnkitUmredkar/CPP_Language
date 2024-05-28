@@ -7,6 +7,7 @@
 //- cafe_establish_year
 //- cafe_staff_quantity
 
+
 #include<iostream>
 using namespace std;
 
